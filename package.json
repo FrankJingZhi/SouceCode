@@ -1,0 +1,22 @@
+{
+  "name": "soucecode",
+  "version": "1.0.0",
+  "description": "实现一些经典的源码，以此来练习",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/15666795711/SouceCode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/15666795711/SouceCode/issues"
+  },
+  "homepage": "https://github.com/15666795711/SouceCode#readme",
+  "devDependencies": {
+    "vitest": "^0.21.1"
+  }
+}
