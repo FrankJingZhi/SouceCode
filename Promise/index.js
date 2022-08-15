@@ -165,3 +165,4 @@ const PromiseArr = [p1, p2]
 Promise.race(PromiseArr).then((val1, val2)=>{
   console.log('Promise race: ',val1 , val2)
 })
+
