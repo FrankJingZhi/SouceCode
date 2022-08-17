@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+
+<!-- 用css实现 -->
+<style>
+  /* .box{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    animation-duration: 3s;
+    animation-name: slide;
+  }
+  @keyframes slide{
+    from{
+      margin-left: 0;
+    }
+    to{
+      margin-left: 1000px;
+    }
+  } */
+</style>
+
+<!-- 用js实现 -->
+<style>
+  .box{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+  }
+</style>
+<script type="text/javascript">
+  const box = document.querySelector('.box')
+  let len = 0
+  const timer = setInterval(()=>{
+    len += 100
+    box.style.marginLeft = `${len}px`
+    if(len>=1000){
+      clearInterval(timer)
+    }
+  },500)
+</script>
+</html>
