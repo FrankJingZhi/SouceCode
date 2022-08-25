@@ -42,3 +42,25 @@ const singleton2 = MySingleton1.getInstance('frank')
 console.log(singleton1.name)
 console.log(singleton2.name)
 console.log(singleton1 === singleton2)
+
+/**
+ * 3. 类型守卫
+ */
+// 没有使用类型守卫
+function isString1(param: any): boolean {
+  return typeof param === 'boolean'
+}
+// 使用了类型守卫
+function isString2(param: any): param is string{
+  return typeof param === 'string'
+}
+function test(str: any){
+  // 用.时没有属性方法提示，说明没有使用类型守卫
+  if(isString1(str)){
+    console.log(str.length)
+  }
+  // 用.时有属性方法提示，说明使用了类型守卫
+  if(isString2(str)){
+    console.log(str.length)
+  }
+}
