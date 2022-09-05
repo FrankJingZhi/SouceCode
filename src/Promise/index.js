@@ -142,27 +142,27 @@ class MyPromise{
   }
 }
 
-const myP1 = new MyPromise((resolve,reject)=>{
-  resolve(1)
-})
-const myP2 = new MyPromise((resolve,reject)=>{
-  resolve(2)
-})
-const myPromiseArr = [myP1, myP2]
-MyPromise.race(myPromiseArr).then((val1, val2)=>{
-  console.log('MyPromise race: ',val1 , val2)
-})
+// const myP1 = new MyPromise((resolve,reject)=>{
+//   resolve(1)
+// })
+// const myP2 = new MyPromise((resolve,reject)=>{
+//   resolve(2)
+// })
+// const myPromiseArr = [myP1, myP2]
+// MyPromise.race(myPromiseArr).then((val1, val2)=>{
+//   console.log('MyPromise race: ',val1 , val2)
+// })
 
-console.log('----------------------------')
+// console.log('----------------------------')
 
-const p1 = new Promise((resolve,reject)=>{
-  resolve(1)
-})
-const p2 = new Promise((resolve,reject)=>{
-  resolve(2)
-})
-const PromiseArr = [p1, p2]
-Promise.race(PromiseArr).then((val1, val2)=>{
-  console.log('Promise race: ',val1 , val2)
-})
+// const p1 = new Promise((resolve,reject)=>{
+//   resolve(1)
+// })
+// const p2 = new Promise((resolve,reject)=>{
+//   resolve(2)
+// })
+// const PromiseArr = [p1, p2]
+// Promise.race(PromiseArr).then((val1, val2)=>{
+//   console.log('Promise race: ',val1 , val2)
+// })
 

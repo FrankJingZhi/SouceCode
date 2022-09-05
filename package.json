@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/15666795711/SouceCode#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/parser": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/traverse": "^7.18.13",
     "vitest": "^0.21.1"
   }
 }
