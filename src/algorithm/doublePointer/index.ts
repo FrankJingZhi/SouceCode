@@ -36,3 +36,8 @@ function mergeArr(nums1, m, nums2, n){
 console.log('mergeArr', mergeArr([2,5,6], 3, [1,2,3], 3))
 
 // 但是就 JS 而言，我们还可以“另辟蹊径”，仔细想想，你有什么妙招？
+function setArr(nums1, m, nums2, n){
+  return [...nums1, ...nums2].sort((a,b)=> a-b)
+}
+
+console.log('setArr', setArr([2,5,6], 3, [1,2,3], 3))
