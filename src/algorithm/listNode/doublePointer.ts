@@ -16,7 +16,11 @@ class ListNode{
   }
 }
 
-function doublePointers(list, n){
+/**
+ * 1.求长度
+ * 2.做减法，找定位。
+ */
+function doublePointers1(list, n){
   let dummy = new ListNode('dummy')
   dummy.next = list
   let len = 0
@@ -47,6 +51,38 @@ list.next.next.next.next = new ListNode(5)
 list.next.next.next.next.next = new ListNode(6)
 list.next.next.next.next.next.next = new ListNode(7)
 
-console.log(doublePointers(list, 1))
-console.log(doublePointers(list, 3))
-console.log(doublePointers(list, 5))
+console.log(doublePointers1(list, 1))
+console.log(doublePointers1(list, 3))
+console.log(doublePointers1(list, 5))
+
+/**
+ * 快慢指针
+ */
+function doublePointers2(list, n){
+  let dummy = new ListNode('head')
+  dummy.next = list
+  let fast = list
+  let slow = list
+  while(n!==0){
+    fast = fast.next
+    n--
+  }
+  while(fast){
+    fast = fast.next
+    slow = slow.next
+  }
+  slow.next = slow.next.next
+  return dummy.next
+}
+
+const list2 = new ListNode(1)
+list2.next = new ListNode(2)
+list2.next.next = new ListNode(3)
+list2.next.next.next = new ListNode(4)
+list2.next.next.next.next = new ListNode(5)
+list2.next.next.next.next.next = new ListNode(6)
+list2.next.next.next.next.next.next = new ListNode(7)
+
+console.log(doublePointers1(list2, 1))
+console.log(doublePointers1(list2, 3))
+console.log(doublePointers1(list2, 5))
