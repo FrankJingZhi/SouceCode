@@ -16,23 +16,23 @@ function balanceTreeNode(node) {
 const treeNode = {
   val: '1',
   left: {
-    val: '1-1',
+    val: '2',
     left: {
-      val: '1-1-1',
+      val: '3',
     },
     right: {
-      val: '1-1-2'
+      val: '4'
     }
   },
   right: {
-    val: '2',
+    val: '5',
     left: {
-      val: '2-2-1',
+      val: '6',
       left: {
-        val: '2-2-1',
+        val: '7',
       },
       right: {
-        val: '2-2-2'
+        val: '8'
       }
     }
   }
