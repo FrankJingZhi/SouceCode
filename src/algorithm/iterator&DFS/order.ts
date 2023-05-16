@@ -33,6 +33,8 @@ const treeNode = {
     }
   }
 }
+
+// 迭代算法的先序遍历
 // 1,2,3,4,5,6,7,8
 function preOrder(treeNode){
   let stack:any[] = [],
@@ -52,6 +54,7 @@ function preOrder(treeNode){
 }
 console.log('preOrder', preOrder(treeNode))
 
+// 迭代算法的后序遍历
 // 3,4,2,7,8,,6,5,1
 function postOrder(treeNode){
   let stack: any[] = [],
@@ -71,6 +74,7 @@ function postOrder(treeNode){
 }
 console.log('postOrder', postOrder(treeNode))
 
+// 迭代算法的中序遍历
 // 3,2,4,1,7,6,8,5
 function inOrder(treeNode){
   let stack: any[] = [],
@@ -88,3 +92,38 @@ function inOrder(treeNode){
   return result
 }
 console.log('inOrder', inOrder(treeNode))
+
+// 二叉树的层序遍历
+function levelOrder(treeNode){
+  let result: any[] = []
+  let queue:any[] = []
+  queue.push(treeNode)
+  while(queue.length){
+    const level:any[] = []
+    const len = queue.length
+    for(let i=0;i<len;i++){
+      const cur:any = queue.shift()
+      level.push(cur.val)
+      if(cur.left){
+        queue.push(cur.left)
+      }
+      if(cur.right){
+        queue.push(cur.right)
+      }
+    }
+    result.push(level)
+  }
+  return result
+}
+console.log('levelOrder', levelOrder(treeNode))
+
+// 翻转二叉树
+function reverseTree(treeNode){
+  if(!treeNode) return treeNode
+  let left = reverseTree(treeNode.left)
+  let right = reverseTree(treeNode.right)
+  treeNode.left = right;
+  treeNode.right = left
+  return treeNode
+}
+console.log('reverseTree', reverseTree(treeNode))
