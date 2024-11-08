@@ -16,6 +16,16 @@ function BFS(root){
   }
 }
 
+function BFS2(root){
+  if(!root) return null
+  const result = [root.val]
+  function fn(left, right){
+    result.push(left.val,right.val)
+    return result
+  }
+  return root.left || root.right ? fn(root.left, root.right) : result
+}
+
 const root = {
   val: "A",
   left: {
@@ -35,4 +45,4 @@ const root = {
   }
 };
 
-BFS(root)
+// BFS(root)
